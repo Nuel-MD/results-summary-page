@@ -1,0 +1,233 @@
+body {
+    background-color: hsla(0, 9%, 98%, 0.1);
+    font-family: "Hanken Grotesk", sans-serif;
+    font-size: 18px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+
+.centered-div {
+    display: grid;
+    grid-template-columns: 300px 50px 350px;
+    grid-template-rows: 400px;
+    max-width: 700px;
+    min-width: 500px;
+    box-shadow: darkgray 50px;
+    border-bottom: 40px solid rgba(0, 0, 0, 0.034);
+    border-left: 20px solid rgba(0, 0, 0, 0.034);
+    border-right: 20px solid rgba(0, 0, 0, 0.034);
+    border-top: 3px solid rgba(0, 0, 0, 0.034);
+    border-radius: 70px ;
+}
+
+.result {
+    background-color: hsl(241, 81%, 54%);
+    grid-area: 1/1/2/3;
+    order: 1;
+    border-radius: 23px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: linear-gradient(to top,  hsl(241, 81%, 54%), hsl(252, 100%, 67%));
+    
+}
+
+.summary {
+    background-color: hsla(0, 0%, 100%, 0.1);
+    grid-area: 1/2/2/4;
+    border-radius: 20px;
+    display: grid;
+    gap: 15px;
+    padding: 25px;
+    grid-template-columns: 25px 20px auto 30px auto;
+    grid-template-rows: 50px 1fr 1fr 1fr 1fr 1fr ;
+}
+
+.Reaction {
+    grid-area:2/3/3/-1 ;
+    background-color: hsla(0, 100%, 67%, 0.1);
+    border-radius: 7px;
+    display: flex;
+    flex-direction: row;
+}
+.Memory {
+    grid-area: 3/3/4/-1 ;
+    background-color: hsla(39, 100%, 56%, 0.1);
+    border-radius: 7px;
+    display: flex;
+    flex-direction: row;
+}
+.Verbal {
+    grid-area: 4/3/5/-1;
+    background-color: hsla(166, 100%, 37%, 0.1);
+    border-radius: 7px;
+    display: flex;
+    flex-direction: row;
+}
+
+.Visual {
+    grid-area: 5/3/6/-1 ;
+    background-color: hsla(234, 84%, 45%, 0.1);
+    border-radius: 7px;
+    display: flex;
+    flex-direction: row;
+}
+
+button {
+    grid-area:6/3/7/-1 ;
+    height: 40px;
+    background-color: hsl(224, 30%, 27%) ;
+    color: white;
+    border-radius: 30px;
+    padding: 10px;
+    border: 0px;
+    cursor: url("./assets/images/pointinghand.svg"), pointer;
+}
+button:hover {
+    background-image: linear-gradient(to top, hsl(241, 81%, 54%), hsl(252, 100%, 67%));
+
+    
+  }
+.item1 {
+    flex: 0.5;
+    margin: 10px;
+    margin-right: 0px;
+}
+
+.item2 {
+    flex: 1.5;
+    margin: 10px;
+    margin-left: 0px;
+}
+.item3 {
+    flex: 1;
+    margin: 10px;
+}
+#summary {
+    grid-area: 1/3/2/5;
+    margin-bottom: 10px;
+}
+
+.reaction{
+    color: hsl(0, 100%, 67%);
+    font-weight: bold;
+}
+.memory {
+    color: hsl(39, 100%, 56%);
+    font-weight: bold;
+}
+.verbal{
+    color: hsl(166, 100%, 37%);
+    font-weight: bold;
+}
+.visual {
+    color: hsl(234, 85%, 45%);
+    font-weight: bold;
+}
+.black {
+    color: black;
+    font-weight: bolder;
+}
+
+.dark{
+    font-weight: 700;
+    color: hsla(100, 0%, 0%, 0.2);
+    
+}
+
+.score-number {
+    
+    padding: 25px;
+    height: 100px;
+    width: 100px;
+    border-radius: 50% ;
+    text-align: center;
+    background-image: linear-gradient(to bottom,  hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+
+}
+
+.light {
+    
+    color: hsla(0, 0%, 100%, 0.2);
+}
+
+.large {
+    color: hsla(0, 0%, 100%, 1);
+    margin: 0px;
+    padding: 0px;
+    font-size: 45px;
+}
+.R {
+    color: hsla(0, 0%, 100%, 0.6);
+}
+
+.G {
+    color: hsla(0, 0%, 100%, 0.8);
+    margin: 0px;
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+
+.p {
+    color: hsla(0, 0%, 100%, 0.6);
+    margin: 0px;
+}
+
+@media(max-width: 500px){
+    .container {
+        margin: 0px;
+        padding: 0px;
+        height: 100%;
+        width: 100%;
+    }
+    .centered-div{
+        min-width: 100%;
+        min-height: 100vh;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 43% 50px 50%;
+    }
+    .result{
+        grid-area: 1/1/3/2;
+        margin: 0px;
+        padding: 30px;
+        padding-bottom: 40px;
+    }
+    .summary{
+        grid-area: 2/1/4/2;
+        display: grid;
+        grid-template-columns: auto 30px auto;
+        grid-template-rows: 50px 50px 1fr 1fr 1fr 1fr 1fr;
+    }
+    #summary {
+        grid-area: 2/1/3/2;
+        margin-bottom: 10px;
+    }
+    .Reaction{
+        grid-area: 3/1/4/4;
+    }
+    .Memory{
+        grid-area: 4/1/5/-1;
+    }
+    .Verbal{
+        grid-area: 5/1/6/-1;
+    }
+    .Visual{
+        grid-area: 6/1/7/-1;
+    }
+    button{
+        grid-area: 7/1/8/-1;
+    }
+    html {
+        padding: 0px;
+        margin: 0px;
+    }
+}
